@@ -1,5 +1,7 @@
 # 🏥 ADHI — Landing Page
 
+![Uploading Gravação de Tela 2026-05-01 151522.gif…]()
+
 > Landing page institucional desenvolvida para a **Associação ADHI — Angra dos Reis**, voltada ao apoio de diabéticos, hipertensos e pessoas que buscam mais qualidade de vida.
 
 ## 📌 Sobre o Projeto
