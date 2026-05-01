@@ -2,7 +2,7 @@
 
 <br/>
 
-<img width="700" height="394" alt="Gravação de Tela 2026-05-01 151522" src="https://github.com/user-attachments/assets/25a259a7-31c8-4c03-853c-5df7476dbc5d" />
+<img width="400" height="181" alt="Gravação de Tela 2026-05-01 151522" src="https://github.com/user-attachments/assets/25a259a7-31c8-4c03-853c-5df7476dbc5d" />
 
 <br/>
 
