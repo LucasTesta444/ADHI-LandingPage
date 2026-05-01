@@ -1,0 +1,372 @@
+.container-home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+  background-color: var(--background);
+  padding: clamp(7rem, 13vh, 9rem) 5rem 4.5rem;
+}
+
+.home-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
+  align-items: center;
+  gap: 3rem;
+  width: min(100%, 1280px);
+  margin: 0 auto;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.ball {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem;
+  color: var(--brand-primary);
+  background-color: rgba(74, 128, 196, 0.1);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ball span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--brand-primary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.text-home {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text-home h1 {
+  max-width: 620px;
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.45rem, 3.4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 0.96;
+}
+
+.text-home h1 span {
+  color: var(--brand-primary);
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.text-home p {
+  max-width: 560px;
+  color: var(--muted-foreground);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.button-home {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-button-download,
+.button-beneficios {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.6rem;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.home-button-download {
+  gap: 0.8rem;
+  color: var(--background);
+  background-color: var(--brand-secondary);
+  box-shadow: 0 16px 32px rgba(224, 125, 58, 0.22);
+}
+
+.home-button-download:hover {
+  background-color: #d56f2f;
+  box-shadow: 0 20px 38px rgba(224, 125, 58, 0.28);
+  transform: translateY(-3px);
+}
+
+.home-button-download img {
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: drop-shadow(0 1px 8px rgba(255, 255, 255, 0.45));
+  transition: transform 0.2s ease;
+}
+
+.home-button-download:hover img {
+  transform: translateY(-3px);
+}
+
+.button-beneficios {
+  color: var(--foreground);
+  background-color: transparent;
+  border: 2px solid var(--border);
+}
+
+.button-beneficios:hover {
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  transform: translateY(-3px);
+}
+
+.home-info {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 0.7rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.home-stat h2 {
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.home-stat p {
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+}
+
+.home-visual {
+  position: relative;
+  display: block;
+}
+
+.home-image-card {
+  position: relative;
+  height: min(58vh, 500px);
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 28px 70px rgba(74, 128, 196, 0.14);
+}
+
+.home-image-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.home-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(74, 128, 196, 0.18),
+    transparent 52%
+  );
+  pointer-events: none;
+}
+
+.home-modal-pulse {
+  position: absolute;
+  left: -1.2rem;
+  bottom: -1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: min(22rem, calc(100% - 2rem));
+  padding: 1rem 1.15rem;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(22, 28, 45, 0.16);
+}
+
+.home-icon-health {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(245, 200, 66, 0.22);
+  border-radius: 50%;
+}
+
+.home-icon-health span {
+  font-size: 1.45rem;
+}
+
+.home-modal-pulse-info h2 {
+  color: var(--foreground);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.home-modal-pulse-info p {
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 2.8rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.arrow-down span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.arrow-down img {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .container-home {
+    height: auto;
+    min-height: auto;
+    padding: 8.5rem 3rem 6rem;
+  }
+
+  .home-inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .home-visual {
+    width: min(100%, 720px);
+  }
+}
+
+@media (max-width: 720px) {
+  .container-home {
+    padding: 8rem 1.25rem 5rem;
+  }
+
+  .home-content {
+    gap: 1.6rem;
+  }
+
+  .ball {
+    font-size: 0.82rem;
+  }
+
+  .text-home p {
+    font-size: 1rem;
+  }
+
+  .button-home {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-button-download,
+  .button-beneficios {
+    width: 100%;
+    min-height: 3.6rem;
+    padding: 0 1.25rem;
+  }
+
+  .home-info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .home-stat h2 {
+    font-size: 1.55rem;
+  }
+
+  .home-stat p {
+    font-size: 0.82rem;
+  }
+
+  .home-image-card {
+    height: 380px;
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  .home-modal-pulse {
+    left: 1rem;
+    right: 1rem;
+    bottom: -1.2rem;
+    width: auto;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-info {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stat {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .home-image-card {
+    height: 320px;
+  }
+}

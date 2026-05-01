@@ -1,0 +1,145 @@
+.container-duvidas {
+  width: 100%;
+  padding: 5rem 1.5rem 6rem;
+  background-color: var(--background);
+}
+
+.duvidas-info {
+  margin-bottom: 4.5rem;
+  text-align: center;
+}
+
+.duvidas-info p {
+  color: var(--brand-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  margin-bottom: 1.2rem;
+}
+
+.duvidas-info h1 {
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.duvidas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: min(100%, 880px);
+  margin: 0 auto;
+}
+
+.duvida-card {
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid #dce6f2;
+  border-radius: 18px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.duvida-card-open {
+  border-color: #c9dcf3;
+  box-shadow: 0 14px 28px rgba(22, 28, 45, 0.1);
+}
+
+.duvida-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 5.6rem;
+  padding: 1.5rem 1.9rem;
+  color: #071120;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.duvida-question:focus-visible {
+  outline: 3px solid rgba(74, 128, 196, 0.28);
+  outline-offset: -6px;
+}
+
+.duvida-icon {
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #607086;
+  stroke-width: 2.3;
+  transition: transform 0.2s ease;
+}
+
+.duvida-card-open .duvida-icon {
+  transform: rotate(180deg);
+}
+
+.duvida-answer {
+  max-height: 0;
+  padding: 0 1.9rem;
+  opacity: 0;
+  transition:
+    max-height 0.25s ease,
+    padding 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.duvida-card-open .duvida-answer {
+  max-height: 220px;
+  padding: 0 1.9rem 1.9rem;
+  opacity: 1;
+}
+
+.duvida-answer p {
+  max-width: 760px;
+  color: #5f6c82;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.duvida-question span {
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .container-duvidas {
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  .duvidas-info {
+    margin-bottom: 3rem;
+  }
+
+  .duvidas-info h1 {
+    font-size: 2.75rem;
+  }
+
+  .duvida-question {
+    min-height: 4.8rem;
+    padding: 1.25rem 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .duvida-answer {
+    padding: 0 1.25rem;
+  }
+
+  .duvida-card-open .duvida-answer {
+    max-height: 340px;
+    padding: 0 1.25rem 1.4rem;
+  }
+
+  .duvida-answer p {
+    font-size: 0.98rem;
+  }
+}

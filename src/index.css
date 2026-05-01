@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --brand-primary: #4A80C4;
+  --brand-secondary: #E07D3A;
+  --brand-terciary: #F5C842;
+
+  --background: #FAF8F5;
+  --foreground: #161C2D;
+  --card: #FFFFFF;
+  --muted: #EDE9E2;
+  --muted-foreground: #6B7280;
+  --border: #E2E4EA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+#inicio,
+#beneficios,
+#comunidade,
+#duvidas {
+  scroll-margin-top: 7.5rem;
+}

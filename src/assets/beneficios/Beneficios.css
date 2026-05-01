@@ -1,0 +1,131 @@
+.container-beneficios {
+  width: 100%;
+  background-color: var(--background);
+  padding: 6rem 5rem;
+}
+
+.beneficios-info {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.beneficios-info > p:first-child {
+  color: var(--brand-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.9rem;
+}
+
+.beneficios-info h1 {
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.beneficios-info > p:last-child {
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.beneficios-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.beneficio-card {
+  position: relative;
+  min-height: 240px;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.beneficio-card:hover {
+  border-color: var(--benefit-color);
+  box-shadow: 0 18px 40px rgba(22, 28, 45, 0.08);
+  transform: translateY(-4px);
+}
+
+.beneficio-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--benefit-color);
+  background-color: rgba(74, 128, 196, 0.1);
+  background-color: color-mix(in srgb, var(--benefit-color) 12%, transparent);
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.beneficio-card:hover .beneficio-icon {
+  background-color: rgba(74, 128, 196, 0.16);
+  background-color: color-mix(in srgb, var(--benefit-color) 18%, transparent);
+  transform: scale(1.05);
+}
+
+.beneficio-icon-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+}
+
+.beneficio-card h3 {
+  color: var(--foreground);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.beneficio-card p {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 980px) {
+  .container-beneficios {
+    padding: 5rem 2rem;
+  }
+
+  .beneficios-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .container-beneficios {
+    padding: 4rem 1.25rem;
+  }
+
+  .beneficios-info h1 {
+    font-size: 2.35rem;
+  }
+
+  .beneficios-card {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficio-card {
+    min-height: auto;
+  }
+}
